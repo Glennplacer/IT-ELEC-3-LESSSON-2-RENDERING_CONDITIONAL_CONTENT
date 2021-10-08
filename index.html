@@ -18,8 +18,8 @@
     </header>
     <section id="assignment">
       <h2>Assignment</h2>
-      <input type="text">
-      <button>Add Task</button>
+      <input type="text" v-model="enteredTaskValue">
+      <button @click="addTask">Add Task</button>
       <ul>
         <!--Output the list of task here-->
       </ul>
