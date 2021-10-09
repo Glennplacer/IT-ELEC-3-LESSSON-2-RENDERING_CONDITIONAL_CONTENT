@@ -20,12 +20,13 @@
       <h2>Assignment</h2>
       <input type="text" v-model="enteredTaskValue">
       <button @click="addTask">Add Task</button>
-      <ul>
+      <ul :class="{visible: MyButton, hide: !MyButton}">
         <!--Output the list of task here-->
         <li v-for="task in tasks"> {{ task }}</li>
       </ul>
+      <br>
       <!--Bonus: Also update the button caption-->
-      <button>Hide/show</button>
+      <button @click="toggle">{{ MyButton ? 'Hide Lists' : 'Show Lists'}}</button>
     </section>
   </body>
 </html>
