@@ -18,6 +18,8 @@
     </header>
     <section id="assignment">
       <h2>Assignment</h2>
+      <!-- 1) Add code to manage a list of tasks in a Vue app -->
+      <!-- When clicking "Add Task" a new task with the entered text should be added -->
       <input type="text" v-model="enteredTaskValue">
       <button @click="addTask">Add Task</button>
       <ul :class="{visible: MyButton, hide: !MyButton}">
@@ -25,8 +27,9 @@
         <li v-for="task in tasks"> {{ task }}</li>
       </ul>
       <br>
-      <!--Bonus: Also update the button caption-->
-      <button @click="toggle">{{ MyButton ? 'Hide Lists' : 'Show Lists'}}</button>
+      <!-- 3) When the below button is pressed, the list should be shown or hidden -->
+      <!-- BONUS: Also update the button caption -->
+      <button @click="toggle" :disabled="!tasks.length">{{ MyButton ? 'Hide Lists' : 'Show Lists'}}</button>
     </section>
   </body>
 </html>
